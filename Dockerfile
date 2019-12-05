@@ -12,6 +12,7 @@ RUN sed -ri "s/(httpredir|deb).debian.org/${APT_MIRROR:-deb.debian.org}/g" /etc/
  && sed -ri "s/(security).debian.org/${APT_MIRROR:-security.debian.org}/g" /etc/apt/sources.list
 ENV GO111MODULE=off
 
+#Docker File Untouched
 FROM base AS criu
 ARG DEBIAN_FRONTEND
 # Install dependency packages specific to criu
